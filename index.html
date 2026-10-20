@@ -291,6 +291,35 @@ footer{ background:var(--preto-2); color:var(--cinza); padding-block:3rem; borde
 .barra__txt{ font-size:.86rem; color:var(--off) }
 .barra__txt small{ display:block; font-size:.7rem; color:var(--cinza) }
 
+
+/* licença de uso individual */
+.licenca-aviso{ margin:1rem 0 0; font-size:.8rem; line-height:1.6; color:var(--tx); opacity:.72; max-width:44ch; }
+.licenca{ padding-block:clamp(3rem,7vw,5rem) clamp(4rem,9vw,6.5rem); }
+.licenca__caixa{
+  max-width:52rem; border:1px solid var(--fio); border-radius:2px;
+  background:rgba(241,235,228,.025); padding:clamp(1.6rem,4.5vw,3rem);
+}
+.licenca__titulo{ font-size:clamp(.95rem,1.6vw,1.08rem); font-weight:400; letter-spacing:.06em; line-height:1.5; margin:0 0 1.4rem; }
+.licenca__selos{ display:flex; flex-wrap:wrap; gap:.6rem; margin:0 0 1.8rem; padding:0; list-style:none; }
+.licenca__selos li{
+  font-size:.7rem; font-weight:500; letter-spacing:.12em; line-height:1.4;
+  color:var(--off); border:1px solid rgba(241,235,228,.28); padding:.5rem .8rem; border-radius:2px;
+}
+.licenca__texto{ font-size:.9rem; line-height:1.8; color:rgba(241,235,228,.76); }
+.licenca__texto p{ max-width:68ch; }
+.licenca__texto ul{ list-style:none; margin:0 0 1.15em; padding:0; max-width:68ch; }
+.licenca__texto li{ position:relative; padding:.35rem 0 .35rem 1.5rem; }
+.licenca__texto li::before{ content:"—"; position:absolute; left:0; color:var(--taupe); }
+.licenca__texto p:last-child{ margin-bottom:0; }
+.licenca mark{
+  background:none; color:var(--off); font-weight:500;
+  border-bottom:1px solid var(--taupe); padding-bottom:1px;
+}
+@media (max-width:640px){
+  .licenca__texto{ font-size:.88rem; }
+  .licenca__selos li{ font-size:.66rem; letter-spacing:.1em; }
+}
+
 /* ---------- 5. responsivo ---------- */
 @media (max-width:900px){
   .duas,.duas--texto-dir,.oferta__caixa{ grid-template-columns:1fr }
@@ -460,6 +489,7 @@ footer{ background:var(--preto-2); color:var(--cinza); padding-block:3rem; borde
         <ul class="tracos" id="itens"></ul>
         <div class="preco"><span>R$</span><strong>197</strong><span>à vista</span></div>
         <a class="btn btn--grande" data-checkout href="#">Quero transformar meus filmes</a>
+        <p class="licenca-aviso">Licença individual e intransferível. Compartilhamento, rateio e redistribuição proibidos.</p>
         <p class="pagamento">Compra processada pela Kiwify. Acesso liberado na área de membros, com os LUTs e as atualizações disponíveis durante 1 ano.</p>
       </div>
     </div>
@@ -481,8 +511,37 @@ footer{ background:var(--preto-2); color:var(--cinza); padding-block:3rem; borde
     <h2>Todo mundo pode gravar. Mas a cor faz alguém <em>sentir</em>.</h2>
     <p class="lead" style="margin-top:1.8rem;max-width:52ch">Dê aos seus filmes uma identidade que seja reconhecida antes mesmo de alguém ver o seu nome.</p>
     <a class="btn btn--grande" data-checkout href="#" style="margin-top:1.6rem">Quero o TVF Color</a>
+    <p class="licenca-aviso">Licença individual e intransferível. Compartilhamento, rateio e redistribuição proibidos.</p>
     <p class="sub" style="margin-top:1.2rem;font-size:.84rem">Oito LUTs por R$197, em Apple Log, Apple Log 2 e Rec.709</p>
     <img class="fim__logo" data-logo alt="TVF Color">
+  </div>
+</section>
+
+<!-- LICENÇA DE USO -->
+<section class="escuro escuro-2 licenca" id="licenca" aria-labelledby="licenca-titulo">
+  <div class="wrap">
+    <div class="licenca__caixa">
+      <h2 class="licenca__titulo" id="licenca-titulo">PROTEÇÃO DE DIREITOS AUTORAIS | LICENÇA DE <mark>USO INDIVIDUAL</mark></h2>
+      <ul class="licenca__selos" aria-label="Resumo da licença">
+        <li>USO INDIVIDUAL</li>
+        <li>PROIBIDO COMPARTILHAR</li>
+        <li>PROIBIDO RATEIOS</li>
+      </ul>
+      <div class="licenca__texto">
+        <p>O TVF COLOR é um produto digital de propriedade intelectual da Tudo Vira Filme (TVF). Sua aquisição concede ao comprador uma licença de <mark>uso individual</mark>, pessoal, intransferível e não exclusiva dos arquivos LUTs.</p>
+        <p>É expressamente <mark>proibido</mark>:</p>
+        <ul>
+          <li><mark>Compartilhar</mark>, distribuir, revender ou disponibilizar os arquivos a terceiros.</li>
+          <li>Organizar ou participar de <mark>rateios</mark>, compras coletivas ou divisões de acesso ao produto.</li>
+          <li>Reproduzir, copiar, doar, sublicenciar ou comercializar os LUTs, integral ou parcialmente, sem autorização expressa.</li>
+          <li>Disponibilizar os arquivos em grupos de WhatsApp, Telegram, plataformas digitais, links públicos ou privados e quaisquer outros meios de distribuição não autorizados.</li>
+        </ul>
+        <p>A proibição se aplica mesmo quando o compartilhamento ocorre gratuitamente ou sem finalidade lucrativa.</p>
+        <p>O descumprimento destas condições poderá resultar na revogação da licença de uso, bloqueio de acesso e adoção das medidas judiciais cabíveis, inclusive para reparação de eventuais danos.</p>
+        <p>A proteção dos direitos autorais encontra fundamento na Lei Federal nº 9.610/1998, especialmente em seus artigos 28 e 29, sem prejuízo da aplicação do artigo 184 do Código Penal, quando configurados os requisitos legais.</p>
+        <p>Ao adquirir o TVF COLOR, você concorda com estas condições. Comprar uma licença não significa adquirir o direito de distribuir o produto.</p>
+      </div>
+    </div>
   </div>
 </section>
 
